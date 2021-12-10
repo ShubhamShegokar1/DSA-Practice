@@ -10,12 +10,8 @@ public class NumberOfWaysReturns {
 	      Arrays.fill(arr, -1);
 	      arr[0]=1;
 	      System.out.println(findWays(arr,n));
-//	      for(int i=0;i<n;i++) {
-//	    	  System.out.print(arr[n-1]+" ");
-//	      }
 	}
 	private static long findWays(long arr[],int n) {
-		//System.out.println(n);
 		if( n>=0)
 		{
 			if(arr[n]!=-1) {
