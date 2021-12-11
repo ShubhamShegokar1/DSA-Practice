@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="1/src/main/java"/>
+	<classpathentry kind="src" path="1/src/test/java"/>
+	<classpathentry kind="src" path="APractice_Contest_Recursion/src"/>
+	<classpathentry kind="src" path="BinarySearch/src"/>
+	<classpathentry kind="src" path="Contest_6/src"/>
+	<classpathentry kind="src" path="contest_8/src"/>
+	<classpathentry kind="src" path="contest7/src"/>
+	<classpathentry kind="src" path="DPContest/src"/>
+	<classpathentry kind="src" path="DSA Revision 1845/src"/>
+	<classpathentry kind="src" path="DSA Revision/src"/>
+	<classpathentry kind="src" path="Evaluation/src"/>
+	<classpathentry kind="src" path="Evaluation2/src"/>
+	<classpathentry kind="src" path="Evaluation3/src"/>
+	<classpathentry kind="src" path="Evaluation4/src"/>
+	<classpathentry kind="src" path="Evaluation5/src"/>
+	<classpathentry kind="src" path="Evaluation6/src"/>
+	<classpathentry kind="src" path="Evaluation7/src"/>
+	<classpathentry kind="src" path="Evaluation8/src"/>
+	<classpathentry kind="src" path="Evaluation9/src"/>
+	<classpathentry kind="src" path="Evlauation10/src"/>
+	<classpathentry kind="src" path="Graphs/src"/>
+	<classpathentry kind="src" path="GreedyModule/src"/>
+	<classpathentry kind="src" path="Linked_List/src"/>
+	<classpathentry kind="src" path="Masai/src"/>
+	<classpathentry kind="src" path="Masai2/src"/>
+	<classpathentry kind="src" path="Masai3/src"/>
+	<classpathentry kind="src" path="Module3 Bianry Search/src"/>
+	<classpathentry kind="src" path="Multithreading/src/package2"/>
+	<classpathentry excluding="LinkedList/" kind="src" path="practice/src"/>
+	<classpathentry kind="src" path="practice/src/LinkedList"/>
+	<classpathentry kind="src" path="practice2/src"/>
+	<classpathentry kind="src" path="practice3/src"/>
+	<classpathentry kind="src" path="Recursion Contest/src"/>
+	<classpathentry kind="src" path="Recursion_time_contest/src"/>
+	<classpathentry kind="src" path="Sorting/src"/>
+	<classpathentry kind="src" path="Time_Contest/src"/>
+	<classpathentry kind="src" path="Time_contest1/src"/>
+	<classpathentry kind="src" path="Unit 4 Sprin3/src"/>
+	<classpathentry kind="src" path="Unit- 4-Sprint Evaluation - 4/src"/>
+	<classpathentry kind="src" path="Unit- 4-unit Eval/src"/>
+	<classpathentry kind="src" path="Unit-5_Sprint1_DSA/src"/>
+	<classpathentry kind="src" path="Unit-5_Sprint2_DSA/src"/>
+	<classpathentry kind="src" path="Unit-5_Sprint3_DSA/src"/>
+	<classpathentry kind="output" path="1/target/classes"/>
+</classpath>

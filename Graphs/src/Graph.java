@@ -1,4 +1,5 @@
 import java.util.LinkedList;
+import java.util.Scanner;
 
 public class Graph {
 	int vertex;
@@ -17,8 +18,8 @@ public class Graph {
 		// add edge
 		list[source].addFirst(destination);
 
-		// add back edge ((for undirected)
-		list[destination].addFirst(source);
+//		// add back edge ((for undirected)
+ //list[destination].addFirst(source);
 	}
 
 	public void printGraph() {
@@ -34,14 +35,17 @@ public class Graph {
 	}
 
 	public static void main(String[] args) {
-		Graph graph = new Graph(5);
-		graph.addEdge(0, 1);
-		graph.addEdge(0, 4);
-		graph.addEdge(1, 2);
-		graph.addEdge(1, 3);
-		graph.addEdge(1, 4);
-		graph.addEdge(2, 3);
-		graph.addEdge(3, 4);
+		Scanner sc = new Scanner(System.in);
+		int N = sc.nextInt();
+		int M = sc.nextInt();
+		
+		Graph graph = new Graph(N+1);
+		for (int i = 0; i < M; i++) 
+		{
+			int a = sc.nextInt();
+			int b = sc.nextInt();
+			graph.addEdge(a, b);
+		}
 		graph.printGraph();
 	}
 }
