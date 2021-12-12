@@ -1,46 +1,35 @@
 import java.util.Scanner;
 
 public class CountIslands {
-
 	 static int cnt=0;
      static int row=0;
      static int column=0;
-
 	public static void main(String[] args) 
 	{
 		Scanner sc = new Scanner(System.in);
 		int test = sc.nextInt();
-		for (int l = 0; l < test; l++) 
-		{
-			cnt=0;
-		   row=sc.nextInt();
-		   column=sc.nextInt();
-		  int arr[][]= new int[row][column];	
-		  for(int i=0;i<row;i++) 
-		  {
-			  for(int j=0;j<column;j++) 
-			  {
-				  arr[i][j]=sc.nextInt();
-			  }
-		  }
-		  
-		  
-		 
-		  for(int i=0;i<row;i++) 
-		  {
-			  for(int j=0;j<column;j++) 
-			  {
-				 if(arr[i][j]==1) 
-				 {
-					cnt++;
-					findAllOne(arr,i,j);	
-					
-				 }
-			  }
-		  }
-		  
-		  System.out.println(cnt);
-		  
+		for (int l = 0; l < test; l++) {
+			cnt = 0;
+			row = sc.nextInt();
+			column = sc.nextInt();
+			int arr[][] = new int[row][column];
+			for (int i = 0; i < row; i++) {
+				for (int j = 0; j < column; j++) {
+					arr[i][j] = sc.nextInt();
+				}
+			}
+
+			for (int i = 0; i < row; i++) {
+				for (int j = 0; j < column; j++) {
+					if (arr[i][j] == 1) {
+						cnt++;
+						findAllOne(arr, i, j);
+					}
+				}
+			}
+
+			System.out.println(cnt);
+
 		}
 
 	}
