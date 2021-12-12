@@ -11,7 +11,6 @@ public class famousSum {
 		Long n=sc.nextLong();
 		str=""+temp;
 		int num=Integer.parseInt(str);
-		//System.out.println(num*n);
 		find(num*n);
 	}
 
@@ -21,6 +20,7 @@ public class famousSum {
 		    temp+= l % 10;
 		    l = l / 10;
 		}
+		System.out.println(l);
 		l=temp;
 		if(l<10) {
 			System.out.println(l);
