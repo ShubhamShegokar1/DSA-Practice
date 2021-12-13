@@ -1,0 +1,49 @@
+An Operating System (os) is a software that acts as an interface between computer  hardware and the user.
+
+Functions of Operating System
+
+1) Process management. (Scheduling)
+2) Security
+3 Handling I/O operations
+4) Memeory Management.
+
+Responsibilities
+1) initializing of Computer harware
+2) Interaction with user and computer
+3) multitasking
+4) multiprocessing
+
+
+
+
+
+
+
+
+CAPS Theorem 
+1) Consistency  
+2) Availability
+3) Partition tolerance 
+
+
+
+cap says that
+1) if we have consistency and Availability          -> partition tolerance
+2) if we have consistency and partition tolerance->Availability 
+3) if we have Availability and partition tolerance->consistency 
+
+
+
+
+
+
+
+1)Amazon SNS : Simple notification service
+2)AWS RDS : SQL Server, SQL, PostgreSQL
+3)AWS Autoscaling
+4)Amazon VPC
+
+
+
+
+

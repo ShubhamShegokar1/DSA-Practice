@@ -6,7 +6,6 @@ import java.util.Scanner;
 public class CollegeEventAndTheCR {
 	int vertex;
 	LinkedList<Integer> list[];
-
 	public CollegeEventAndTheCR(int vertex) 
 	{
 		this.vertex = vertex;
@@ -20,7 +19,6 @@ public class CollegeEventAndTheCR {
 	public void addEdge(int source, int destination) {
 		 list[source].addFirst(destination);
 		 list[destination].addFirst(source);
-
 	}
 
 	static int components=0;
@@ -28,15 +26,12 @@ public class CollegeEventAndTheCR {
 	public int printGraph() 
 	{
 		for (int i = 0; i <visited.size(); i++) 
-		{
-			
+		{		
 			if(visited.get(i)==false) 
 			{
 		    components++;
 			solve(i);
-
  			}
-			
 		}
 		return components;
 	}
@@ -48,7 +43,6 @@ public class CollegeEventAndTheCR {
 			return;
 		}
 		visited.set(i, true);
-		
 		if (list[i].size() > 0) 
 		{
 			 for (int j = 0; j < list[i].size(); j++)
