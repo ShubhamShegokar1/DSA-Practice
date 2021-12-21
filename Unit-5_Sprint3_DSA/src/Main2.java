@@ -1,25 +1,34 @@
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Main2 {
 	public static void main(String[] args) 
 	{
 		Scanner sc = new Scanner(System.in);
-		int n = sc.nextInt();
-        System.out.println( find(n));		
+		int test=sc.nextInt();
+		for(int i=0;i<test;i++) {
+			int n=sc.nextInt();
+			ArrayList<String> list = new ArrayList<>();
+			solve(list,n,n, new StringBuilder());
+			for(int j=0;j<list.size();j++) {
+				System.out.println(list.get(j));
+			}
+		}
 	}
-    static int arr[]= new int[51];
-	private static int find(int n) {
-		if(n==0) {
-			return 1;
+
+	private static void solve(ArrayList<String> list, int left, int right, StringBuilder stringBuilder) {
+		if(right==0) {
+			list.add(stringBuilder.toString());
+			return;
 		}
-		if(n<0) {
-			return 0;
+		if(left>0) {
+			solve(list, left-1, right, stringBuilder.append("("));
+			stringBuilder.deleteCharAt(stringBuilder.length()-1);
 		}
-		if(arr[n]!=0) {
-			return arr[n];
+		if(left<right) {
+			solve(list, left, right-1, stringBuilder.append(")"));
+			stringBuilder.deleteCharAt(stringBuilder.length()-1);
 		}
-		
-		arr[n]=find(n-1)+find(n-3)+find(n-4);
-		return arr[n];
 	}
+   
 }
