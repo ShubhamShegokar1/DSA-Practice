@@ -3,11 +3,12 @@ import java.util.Scanner;
 public class AandBonly 
 {
     static char arr[]= new char[51];
+    static int n;
     public static void main(String[] args) 
     {
     	Scanner sc = new Scanner(System.in);
     	String str=sc.nextLine();
-    	int n=str.length();
+    	n=str.length();
     	for(int i=0;i<n;i++) 
     	{
     	  if(str.charAt(i)=='a') {
@@ -25,15 +26,30 @@ public class AandBonly
     			solve(i);
     		}
     	}
+    	for(int i=0;i<n;i++) {
+    		System.out.print(arr[i]);
+    	}
     }
-	private static void solve(int i) {
-		arr[i]=0;
-		boolean ans=check(i);
-		if(ans!=true) {
-			arr[i]=1;
+	private static void solve(int i) 
+	{
+		arr[i]='a';
+		if(i==0) {
+			if(arr[i+1]=='a') {
+				arr[i]='b';
+			}
 		}
-	}
-	private static boolean check(int i) {
-		return false;
+		else if(i==n-1) {
+			if(arr[i-1]=='a') {
+				arr[i]='b';
+			}
+		}
+		else if(i>0 && i<n-1) 
+		{
+		  	if(arr[i-1]=='a' || arr[i+1]=='a')
+		  	{
+		  		arr[i]='b';
+		  	}
+		}
+		
 	}
 }
