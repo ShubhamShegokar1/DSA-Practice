@@ -13,8 +13,10 @@ public class GeneratePermutations {
 	}
 
 	private static void solve(String str, String ans) {
-		if(str.length()==0) {
-			for(int i=0;i<ans.length();i++) {
+		if(str.length()==0) 
+		{
+			for(int i=0;i<ans.length();i++) 
+			{
 				System.out.print(ans.charAt(i)+" ");
 			}
 			System.out.println();
