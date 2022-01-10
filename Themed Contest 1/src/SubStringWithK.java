@@ -1,33 +1,36 @@
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.Arrays;
 import java.util.Scanner;
+import java.util.StringTokenizer;
 
 public class SubStringWithK {
 
-	public static void main(String[] args) {
-		Scanner sc = new Scanner(System.in);
-		int n=sc.nextInt();
-		int k=sc.nextInt();
-		sc.nextLine();
-		String str=sc.nextLine();
+	public static void main(String[] args) throws IOException {
+		
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		StringTokenizer st = new StringTokenizer(br.readLine());
+		int n=Integer.parseInt(st.nextToken());
+		int k=Integer.parseInt(st.nextToken());
+		StringTokenizer st1 = new StringTokenizer(br.readLine());
+		String str=st1.nextToken();
 		int ans=0;		
        
-		for(int i=0;i<n;i++) 
+		for(int i=0;i<=n-k;i++) 
 		{
-			 int arr[]= new int[26];		
-			 int count=0;
-			for(int j=i;j<n;j++)
+			char arr[]= new char[27];
+			boolean b=false;
+			for(int j=i;j<i+k;j++)
 			{
-				if(arr[str.charAt(j)-'a']==0) 
-				{
-					count++;
+				if(arr[str.charAt(j)-'a']==1) {
+					b=true;
+					break;
 				}
-				
 				arr[str.charAt(j)-'a']++;
-				
-				if(count==k) 
-				{
-					ans++;
-				}
+			}
+			if(b==false) {
+				ans++;
 			}
 			
 		}

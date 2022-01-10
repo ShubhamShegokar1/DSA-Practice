@@ -16,27 +16,31 @@ public class KoramangalaToBTM {
 		while (index < n - 1) 
 		{
 			int tempIndex=0;
-			//System.out.println(index);
 			int currValue=0;
+			int temp=0;
+			int min=0;
 			for (int z = index+1; z <= index + value && tempIndex!=n-1; z++) 
 			{
-				//System.out.print(z+" ");
+				//loop termination 
 				if (z >= n-1) 
 				{
 					tempIndex = n-1;
 				}
  
-				if (currValue < arr[z]) 
+				temp=z+arr[z];
+				if (temp > min) 
 				{
 					currValue = arr[z];
 					tempIndex = z;
+					min=temp;
 				}
 			}
 		
 			value=currValue;
 			index=tempIndex;
-		   System.out.println(value+" "+index);
+		    //System.out.println(value+" "+index);
 			cnt++;
+		
 		}
 		System.out.println(cnt);
 		
