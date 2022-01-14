@@ -9,7 +9,8 @@ public class SimilarText {
 	  static int len1;
 	  static int len2;
 	  static int ans;
-	  static int arr[]= new int[100000];
+	  static int arr[][]= new int[1000][1000];
+
 	public static void main(String[] args) throws IOException 
 	{
 	BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -28,18 +29,18 @@ public class SimilarText {
     		if(i==len1 || j==len2) {
     			return 0;
     		}
-    		if(arr[i+j]>0) {
-    			return arr[i+j];
+    		if(arr[i][j]>0) {
+    			return 0;
     		}
     		
     		if(str1.charAt(i)==str2.charAt(j)) {
     			ans++;
-    			arr[i+j]= 1+solve(i+1, j+1);
-    			return arr[i+j];
+    			arr[i][j]= 1+solve(i+1, j+1);
+    			return arr[i][j];
     		}
     		else {
-    			arr[i+j]= max(solve(i+1, j),solve(i, j+1));
-    			return arr[i+j];
+    			arr[i][j]= max(solve(i+1, j),solve(i, j+1));
+    			return arr[i][j];
     		}
 			
     	}
