@@ -1,46 +1,49 @@
-import java.util.Scanner;
+/*
+-> Factory Method Pattern allows the sub-classes to choose 
+   the type of objects to create.
+-> It promotes the loose-coupling by eliminating the need 
+   to bind application-specific classes into the code.
+*/
 
-interface Currency
-{
+
+interface Currency {
 	String getSymbol();
 }
 
-class Rupees implements Currency
-{
-	@Override
+class Rupees implements Currency{
 	public String getSymbol() {
-		return "Rps";
+		return "rupees";
 	}
 }
 
-class Dollar implements Currency
-{
-	@Override
+class Dollars implements Currency{
 	public String getSymbol() {
-		return "USD";
+		return "dollars";
 	}
 }
 
-class CurrencyFactory
+class Choose
 {
-	public static Currency getCurrency(String country) {
-		if(country.equalsIgnoreCase("India"))
+	Currency currency;
+	String temp;
+	public Choose(String temp) 
+	{
+		this.temp=temp;
+	}
+	public Currency getCurrency() 
+	{
+		if(temp.equalsIgnoreCase("India")) 
 		{
 			return new Rupees();
 		}
-		else 	
-		{
-			return new Dollar();
-		}
+		return new Rupees();
 	}
 }
-
-
-public class Factory_Pattern {
-	public static void main(String[] args) {
-		 Scanner sc = new Scanner(System.in);
-		 String str=sc.nextLine();
-		Currency rupee = CurrencyFactory.getCurrency(str);
-		System.out.println(rupee.getSymbol());
+public class Factory_Pattern{
+	public static void main(String[] args) 
+	{
+        Choose choose= new Choose("india");
+        Currency curr=choose.getCurrency();
+        System.out.println(curr.getSymbol());
 	}
 }

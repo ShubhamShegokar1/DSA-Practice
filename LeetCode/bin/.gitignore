@@ -1,3 +1,4 @@
+/Combinations.class
 /ImplementStrStr.class
 /InsertionSort.class
 /IntersectionOfTwoArrays.class
@@ -11,4 +12,6 @@
 /ValidPalindrome.class
 /ValidPalindrome2.class
 /leetcode_longestDistinct_sub.class
+/longest_one_zero.class
+/slidingWindow.class
 /test.class
