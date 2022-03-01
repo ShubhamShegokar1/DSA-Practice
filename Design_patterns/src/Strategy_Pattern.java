@@ -57,8 +57,10 @@ class Context {
 	}
 }
 
-public class Strategy_Pattern {
-	public static void main(String[] args) throws IOException {
+public class Strategy_Pattern 
+{
+	public static void main(String[] args) throws IOException 
+	{
 		Context context = new Context(new Addition());
 		System.out.println(context.executeStrtegy(5, 5));
 		
