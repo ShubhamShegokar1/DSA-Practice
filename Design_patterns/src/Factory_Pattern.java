@@ -43,6 +43,7 @@ public class Factory_Pattern{
 	public static void main(String[] args) 
 	{
         Choose choose= new Choose("india");
+        choose.toString();
         Currency curr=choose.getCurrency();
         System.out.println(curr.getSymbol());
 	}
