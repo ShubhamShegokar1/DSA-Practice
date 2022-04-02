@@ -5,6 +5,7 @@ import java.io.*;
 
 class Person {
 	String name;
+	private static int k;
 	Integer age;
 
 	public Person(String name, Integer age) {
@@ -16,17 +17,10 @@ class Person {
 		return name;
 	}
 
-	public void setName(String name) {
-		this.name = name;
-	}
-
 	public Integer getAge() {
 		return age;
 	}
 
-	public void setAge(Integer age) {
-		this.age = age;
-	}
 
 	@Override
 	public String toString() {
@@ -38,25 +32,21 @@ class Person {
 public class ComparatorExample {
 
 	public static void main(String[] args) throws IOException {
-		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		StringTokenizer st = new StringTokenizer(br.readLine());
-		int test = Integer.parseInt(st.nextToken());
+		
 		ArrayList<Person> list = new ArrayList<>();
-		
-		for (int i = 0; i < test; i++) 
-		{
-			StringTokenizer st1 = new StringTokenizer(br.readLine());
-			String str = st1.nextToken();
-			Integer n = Integer.parseInt(st1.nextToken());
-			Person p = new Person(str, n);
-			list.add(p);
-		}
-		
+		list.add(new Person("Shubham",12));
+		list.add(new Person("yeloow",11));
+		list.add(new Person("yummy",2));
+		list.add(new Person("anything",19));
+		list.add(new Person("Height",87));
+		list.add(new Person("Minal",38));
+   
+	
 		List<Person> unsortedCustomerList = list;
 		Comparator<Person> nameComparatorLEx = (cust1, cust2) -> cust1.getName().compareTo(cust2.getName());
 		Comparator<Person> ageComparatorLEx = (cust1, cust2) -> cust2.getAge().compareTo(cust1.getAge());
 
-		List<Person> sortedList = unsortedCustomerList.stream().sorted( ageComparatorLEx// 1st compare Name
+		List<Person> sortedList = unsortedCustomerList.stream().sorted(ageComparatorLEx
 				.thenComparing(nameComparatorLEx)) 
 				.collect(Collectors.toList()); 
 
@@ -72,6 +62,7 @@ public class ComparatorExample {
 		      }
 			System.out.println(cnt+" "+sortedList.get(i).getName());
 		}
+		
 	}
 
 }

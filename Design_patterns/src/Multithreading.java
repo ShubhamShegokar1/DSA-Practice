@@ -1,8 +1,8 @@
-class MultithreadingDemo extends Thread 
+class MultithreadingDemo implements Runnable 
 {
    	public void run()
 	{
-			System.out.println("Thread " + Thread.currentThread().getId()+ " is running");
+		System.out.println("Thread " + Thread.currentThread().getId()+ " is running");
 		
 	}
 }
@@ -15,7 +15,6 @@ public class Multithreading
 		for (int i = 0; i < n; i++) 
 		{
 			MultithreadingDemo object= new MultithreadingDemo();
-			object.start();
 		}
 	}
 }
